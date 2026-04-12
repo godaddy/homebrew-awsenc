@@ -1,48 +1,25 @@
 class Awsenc < Formula
   desc "Hardware-backed AWS credential manager using Secure Enclave / TPM"
   homepage "https://github.com/jgowdy/awsenc"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/jgowdy/awsenc/releases/download/v0.2.0/awsenc-aarch64-apple-darwin.tar.gz"
-    sha256 "c07129951350e84de383486e27ce942d8e76e0c04b2b0e83a69f339a76744b57"
+    url "https://github.com/jgowdy/awsenc/releases/download/v0.3.0/awsenc-aarch64-apple-darwin.tar.gz"
+    sha256 "d311578af12dff7675355fd54b9e50001f98793e9e4acbcbb49eb641e7df22fd"
   end
 
   on_intel do
-    url "https://github.com/jgowdy/awsenc/releases/download/v0.2.0/awsenc-x86_64-apple-darwin.tar.gz"
-    sha256 "37126f1855ce947f1032f41cf0f18cb36d278430660d1b571896207425d14282"
+    url "https://github.com/jgowdy/awsenc/releases/download/v0.3.0/awsenc-x86_64-apple-darwin.tar.gz"
+    sha256 "2c82ea6b1263c81ad7113c9c18b837f7a16527fbdf2e32df934b8026a30def0b"
   end
 
   depends_on :macos
 
   def install
-    bin.install "awsenc"
-  end
-
-  def caveats
-    <<~EOS
-      To configure awsenc with the AWS CLI:
-
-        awsenc install --profile <name> \\
---organization <org>.okta.com \\
---application <app-url> \\
---role <role-arn>
-
-      To add shell integration (export detection + awsenc-use):
-
-        # bash: add to ~/.bashrc
-        eval "\$(awsenc shell-init bash)"
-
-        # zsh: add to ~/.zshrc
-        eval "\$(awsenc shell-init zsh)"
-
-        # fish: add to ~/.config/fish/config.fish
-        awsenc shell-init fish | source
-    EOS
-  end
+    bin.install "awsenc"    end
 
   test do
-    assert_match "awsenc", shell_output("\#{bin}/awsenc --help")
+    assert_match "awsenc", shell_output("\#{bin}/awsenc --help 2>&1", 2)
   end
 end
