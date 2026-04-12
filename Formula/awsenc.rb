@@ -7,10 +7,10 @@ class Awsenc < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/jgowdy/awsenc/releases/download/v0.1.0/awsenc-aarch64-apple-darwin.tar.gz"
-      sha256 "7887d851c451cbb80efc09422ceeda2fad021ab3b9ec023e6bf589f67866bfed"
+      sha256 "a31af545b4759851f490f463578541f16e636705215af100adf7507c851ec089"
     else
       url "https://github.com/jgowdy/awsenc/releases/download/v0.1.0/awsenc-x86_64-apple-darwin.tar.gz"
-      sha256 "d7110b55b35ce578dd03707ba93f532c3ac1254062c1be3c9b13cc8a84fc8ab4"
+      sha256 "28768a2e6cbefe6921a5f76ac8c8d5b84769f28a4e7d912f0349cee95643b25d"
     end
   end
 
