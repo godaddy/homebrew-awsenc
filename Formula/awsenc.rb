@@ -6,12 +6,12 @@ class Awsenc < Formula
 
   on_arm do
     url "https://github.com/jgowdy/awsenc/releases/download/v0.1.0/awsenc-aarch64-apple-darwin.tar.gz"
-    sha256 "d9867277feb0f088e07cd18abff0f1a0958555c7b820b8e47f076186fa6e78aa"
+    sha256 "15cf85228db7dbce4efdbf68cd73b85a9d3ee2b7ae820974b4a9bed3573c5790"
   end
 
   on_intel do
     url "https://github.com/jgowdy/awsenc/releases/download/v0.1.0/awsenc-x86_64-apple-darwin.tar.gz"
-    sha256 "02212cd87a574ca69fad6102ef6e517ef865dfc1c58ecea83c0d83877393bdd8"
+    sha256 "4a1b7f078565559901d2dd339864b76cb736a03b0f6e6b8d7456f1996270c495"
   end
 
   depends_on :macos
@@ -25,9 +25,9 @@ class Awsenc < Formula
       To configure awsenc with the AWS CLI:
 
         awsenc install --profile <name> \\
-          --organization <org>.okta.com \\
-          --application <app-url> \\
-          --role <role-arn>
+--organization <org>.okta.com \\
+--application <app-url> \\
+--role <role-arn>
 
       To add shell integration (export detection + awsenc-use):
 
