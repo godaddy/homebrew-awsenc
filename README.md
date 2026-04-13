@@ -1,11 +1,11 @@
 # homebrew-awsenc
 
-Homebrew tap for [awsenc](https://github.com/jgowdy/awsenc) -- hardware-backed AWS credential manager using macOS Secure Enclave.
+Homebrew tap for [awsenc](https://github.com/godaddy/awsenc) -- hardware-backed AWS credential manager using macOS Secure Enclave.
 
 ## Install
 
 ```bash
-brew tap jgowdy/awsenc
+brew tap godaddy/awsenc
 brew install awsenc
 ```
 
@@ -19,5 +19,5 @@ brew upgrade awsenc
 
 ```bash
 brew uninstall awsenc
-brew untap jgowdy/awsenc
+brew untap godaddy/awsenc
 ```
