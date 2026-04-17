@@ -1,17 +1,17 @@
 class Awsenc < Formula
   desc "Hardware-backed AWS credential manager using Secure Enclave / TPM"
   homepage "https://github.com/godaddy/awsenc"
-  version "0.4.17"
+  version "0.4.18"
   license "MIT"
 
   on_arm do
-    url "https://github.com/godaddy/awsenc/releases/download/v0.4.17/awsenc-aarch64-apple-darwin.tar.gz"
-    sha256 "772de8c3c0b4daa613c45bc04f8e26315b3de89987b37377c528dcf2fa927a5b"
+    url "https://github.com/godaddy/awsenc/releases/download/v0.4.18/awsenc-aarch64-apple-darwin.tar.gz"
+    sha256 "6b381d10fe219b1c03ca86a5cdfb7c46ce664492b8000deb61c9e995270a4e6d"
   end
 
   on_intel do
-    url "https://github.com/godaddy/awsenc/releases/download/v0.4.17/awsenc-x86_64-apple-darwin.tar.gz"
-    sha256 "e750fc831cda35236c4de2b32f17dd6543f0cf3a11c40d64108cdf8ab00a961d"
+    url "https://github.com/godaddy/awsenc/releases/download/v0.4.18/awsenc-x86_64-apple-darwin.tar.gz"
+    sha256 "a69e504892a0679111039db9114e495423ae5dda7af4414a07f52da2d9e146c5"
   end
 
   depends_on :macos
